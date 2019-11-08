@@ -1,5 +1,8 @@
 class ApplicationController < ActionController::API
 
+    include Response
+    include ExceptionHandler
+
     private
 
     def create_token(user_id)
