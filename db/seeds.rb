@@ -33,16 +33,16 @@ def search(term, location)
       location: location,
       limit: SEARCH_LIMIT
     }
-  
+
     response = HTTP.auth("Bearer #{API_KEY}").get(url, params: params)
     response.parse
 end
 
-nydinner = search("dinner", "New York City")
+nydinner = search("", "New York City")
 
 nydinner["businesses"].each do |rest|
     if Restaurant.all.find_by(name: rest["name"])
-    else 
+    else
         Restaurant.create({
             name: rest["name"],
             image: rest["image_url"],
