@@ -16,6 +16,7 @@ gem 'puma', '~> 3.11'
 # Use Active Model has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 gem 'yelp'
+gem "dotenv-rails"
 # gem 'yelp-fusion'
 gem 'http'
 # Use Active Storage variant

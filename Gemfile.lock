@@ -67,10 +67,14 @@ GEM
     crass (1.0.5)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
+    dotenv (2.7.5)
+    dotenv-rails (2.7.5)
+      dotenv (= 2.7.5)
+      railties (>= 3.2, < 6.1)
     erubi (1.9.0)
-    faraday (0.15.4)
+    faraday (0.17.0)
       multipart-post (>= 1.2, < 3)
-    faraday_middleware (0.12.2)
+    faraday_middleware (0.13.1)
       faraday (>= 0.7.4, < 1.0)
     ffi (1.11.1)
     ffi-compiler (1.0.1)
@@ -175,10 +179,6 @@ GEM
       faraday (~> 0.8, >= 0.8.0)
       faraday_middleware (~> 0.8, >= 0.8.0)
       simple_oauth (~> 0.3.1)
-    yelp-fusion (1.0)
-      faraday (~> 0.15.2)
-      faraday_middleware (~> 0.12.2)
-      minitest (>= 4.2.0)
     zeitwerk (2.2.1)
 
 PLATFORMS
@@ -188,6 +188,7 @@ DEPENDENCIES
   bcrypt (~> 3.1.7)
   bootsnap (>= 1.4.2)
   byebug
+  dotenv-rails
   http
   listen (>= 3.0.5, < 3.2)
   pg (>= 0.18, < 2.0)
@@ -198,7 +199,6 @@ DEPENDENCIES
   spring-watcher-listen (~> 2.0.0)
   tzinfo-data
   yelp
-  yelp-fusion
 
 RUBY VERSION
    ruby 2.6.1p33

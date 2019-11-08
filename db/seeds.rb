@@ -13,8 +13,7 @@ require "optparse"
 
 Restaurant.delete_all
 
-API_KEY = "grYgRzPX6VW3Qw9f1KdhomrHGzdUakGuLp3bMGsTfAaGmp8_UIFI2TTPi5rdHftQkuYG8_RP2t_X7idGG4Q2BIEC9DFdX8eSc9hBCNwF8k3ijGn6lTJ5bH2JNZ3FXXYx"
-
+API_KEY = ENV["YELP_API_KEY"]
 
 # Constants, do not change these
 API_HOST = "https://api.yelp.com"
