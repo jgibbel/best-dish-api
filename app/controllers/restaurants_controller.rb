@@ -16,7 +16,7 @@ class RestaurantsController < ApplicationController
   
     # GET /restaurants/:id
     def show
-      json_response(@restaurant)
+      render json: @restaurant
     end
   
     # PUT /restaurants/:id

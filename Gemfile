@@ -19,6 +19,7 @@ gem 'jwt', '~> 2.2'
 gem 'bcrypt', '~> 3.1.7'
 gem 'yelp'
 gem "dotenv-rails"
+gem 'active_model_serializers'
 # gem 'yelp-fusion'
 gem 'http'
 # Use Active Storage variant
