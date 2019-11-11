@@ -6,13 +6,22 @@ class UsersController < ApplicationController
   end
 
     def show
+      # byebug
+        # user_id = params[:id]
+        # if user_id_from_token == user_id.to_i
+        #   user = User.find(user_id)
+        #   render json: user
+        # else
+        #   render json: { go_away: true }, status: :unauthorized
+        # end
         user_id = params[:id]
-        if user_id_from_token == user_id.to_i
-          user = User.find(user_id)
+        user = User.find(user_id)
+        if user 
           render json: user
-        else
-          render json: { go_away: true }, status: :unauthorized
+        else 
+          render json: { error: "bad"}
         end
+        
       end
 
       def create
@@ -29,5 +38,7 @@ class UsersController < ApplicationController
       def user_params
         params.permit(:name, :password)
       end
+
+
 
 end
