@@ -11,7 +11,9 @@ require "json"
 require "http"
 require "optparse"
 
+Dish.delete_all
 Restaurant.delete_all
+
 
 API_KEY = ENV["YELP_API_KEY"]
 
@@ -24,7 +26,7 @@ BUSINESS_PATH = "/v3/businesses/"  # trailing / because we append the business i
 DEFAULT_BUSINESS_ID = "yelp-new-york-city"
 DEFAULT_TERM = "dinner"
 DEFAULT_LOCATION = "New York, NY"
-SEARCH_LIMIT = 10
+SEARCH_LIMIT = 50
 
 def search(term, location)
     url = "#{API_HOST}#{SEARCH_PATH}"
@@ -54,3 +56,9 @@ nydinner["businesses"].each do |rest|
         })
     end
 end
+
+Restaurant.all.each do |rest| 
+    3.times do 
+        Dish.create({restaurant_id: rest.id, name: Faker::Food.dish})
+    end 
+end 
